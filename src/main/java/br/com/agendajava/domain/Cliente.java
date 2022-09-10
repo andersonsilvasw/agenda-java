@@ -9,25 +9,24 @@ public class Cliente {
 	private String celular;
 	private String whatsapp;
 	private String observacao;
-	private Date data_de_nascimento;
+	private Date dataNascimento;
 	
 	public Cliente() {
 	}
 
-	public Cliente(long id, String nome, String celular, String whatsapp, String observacao, Date data_de_nascimento) {
-		super();
+	public Cliente(long id, String nome, String celular, String whatsapp, String observacao, Date dataNascimento) {
 		this.id = id;
 		this.nome = nome;
 		this.celular = celular;
 		this.whatsapp = whatsapp;
 		this.observacao = observacao;
-		this.data_de_nascimento = data_de_nascimento;
+		this.dataNascimento = dataNascimento;
 	}
 
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nome=" + nome + ", celular=" + celular + ", whatsapp=" + whatsapp
-				+ ", observacao=" + observacao + ", data_de_nascimento=" + data_de_nascimento + "]";
+				+ ", observacao=" + observacao + ", dataNascimento=" + dataNascimento + "]";
 	}
 
 	public long getId() {
@@ -70,12 +69,12 @@ public class Cliente {
 		this.observacao = observacao;
 	}
 
-	public Date getData_de_nascimento() {
-		return data_de_nascimento;
+	public Date getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setData_de_nascimento(Date data_de_nascimento) {
-		this.data_de_nascimento = data_de_nascimento;
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 	
 }
