@@ -1,48 +1,28 @@
 package br.com.agendajava.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "colaborador")
+@Data
 public class Colaborador {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
+	
+	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
+	
+	@Column(name = "observacao", length = 100)
 	private String observacao;
 
-	public Colaborador() {
-	}
-
-	public Colaborador(String id, String nome, String observacao) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.observacao = observacao;
-	}
-
-	@Override
-	public String toString() {
-		return "Colaborador [id=" + id + ", nome=" + nome + ", observacao=" + observacao + "]";
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getObservacao() {
-		return observacao;
-	}
-
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
-	}
-
+	
 }
