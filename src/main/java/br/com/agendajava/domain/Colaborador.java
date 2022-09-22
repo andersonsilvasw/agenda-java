@@ -21,6 +21,7 @@ public class Colaborador extends AbstractEntity{
 
 	public Colaborador() {
 		
+		
 	}
 
 	public Colaborador(String nome, String observacao) {
