@@ -4,9 +4,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -14,12 +11,10 @@ import lombok.Data;
 @Entity
 @Table(name = "cliente")
 @Data
-public class Cliente {
+public class Cliente extends AbstractEntity{
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	
+	private static final long serialVersionUID = -2236845954696800900L;
+
 	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
 	
@@ -34,6 +29,19 @@ public class Cliente {
 	
 	@Column(name = "data_nascimento")
 	private Date dataNascimento;
+
+	public Cliente() {
+		
+	}
+
+	public Cliente(String nome, String celular, String whatsapp, String observacao, Date dataNascimento) {
+		super();
+		this.nome = nome;
+		this.celular = celular;
+		this.whatsapp = whatsapp;
+		this.observacao = observacao;
+		this.dataNascimento = dataNascimento;
+	}
 	
 }
 
