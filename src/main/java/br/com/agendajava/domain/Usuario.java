@@ -32,6 +32,9 @@ public class Usuario extends AbstractEntity {
 		this.nome = nome;
 		this.login = login;
 		this.password = password;
-	}
+	} 
 
+	//teste de git
+	
+	
 }
