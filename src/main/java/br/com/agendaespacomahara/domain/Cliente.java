@@ -1,4 +1,4 @@
-package br.com.agendajava.domain;
+package br.com.agendaespacomahara.domain;
 
 import java.util.Date;
 
@@ -26,21 +26,15 @@ public class Cliente extends AbstractEntity{
 	
 	@Column(name = "observacao", length = 80)
 	private String observacao;
-	
-	@Column(name = "data_nascimento")
-	private Date dataNascimento;
 
 	public Cliente() {
 		
 	}
 
-	public Cliente(String nome, String celular, String whatsapp, String observacao, Date dataNascimento) {
-		super();
+	public Cliente(String nome, String celular, String whatsapp, String observacao) {
 		this.nome = nome;
 		this.celular = celular;
 		this.whatsapp = whatsapp;
 		this.observacao = observacao;
-		this.dataNascimento = dataNascimento;
-	}
-	
+	}	
 }

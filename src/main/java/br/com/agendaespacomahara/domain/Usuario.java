@@ -1,4 +1,4 @@
-package br.com.agendajava.domain;
+package br.com.agendaespacomahara.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,21 +17,23 @@ public class Usuario extends AbstractEntity {
 
 	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
+	
+	@Column(name = "perfil", nullable = false, length = 15)
+	private String perfil;
 
-	@Column(name = "login", nullable = false, length = 12)
+	@Column(name = "login", nullable = false, length = 15)
 	private String login;
 
 	@Column(name = "password", nullable = false, length = 8)
 	private String password;
 	
-	public Usuario() {
-		
+	public Usuario() {	
 	}
 
-	public Usuario(String nome, String login, String password) {
+	public Usuario(String nome, String perfil, String login, String password) {
 		this.nome = nome;
+		this.perfil = perfil;
 		this.login = login;
 		this.password = password;
-	} 
-	
+	} 	
 }
