@@ -1,4 +1,4 @@
-package br.com.agendaespacomahara.domain;
+package br.com.agendajava.domain;
 
 import java.io.Serializable;
 

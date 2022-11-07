@@ -1,4 +1,4 @@
-package br.com.agendaespacomahara.domain;
+package br.com.agendajava.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,17 +16,17 @@ public class Colaborador extends AbstractEntity{
 	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
 	
-	@Column(name = "funcao", nullable = false, length = 60)
-	private String funcao;
-	
 	@Column(name = "observacao", length = 100)
 	private String observacao;
 
-	public Colaborador() {	
+	public Colaborador() {
+		
+		
 	}
 
 	public Colaborador(String nome, String observacao) {
 		this.nome = nome;
 		this.observacao = observacao;
-	}		
+	}	
+	
 }

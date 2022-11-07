@@ -1,4 +1,4 @@
-package br.com.agendaespacomahara.dao;
+package br.com.agendajava.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -11,7 +11,7 @@ public class DAO<E> {
 
 	static {
 		try {
-			emf = Persistence.createEntityManagerFactory("agenda_espaco_mahara");
+			emf = Persistence.createEntityManagerFactory("agenda_java");
 		} catch (Exception e) {
 			throw new RuntimeException(e.getMessage());
 		}

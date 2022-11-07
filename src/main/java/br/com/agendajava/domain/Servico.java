@@ -1,4 +1,4 @@
-package br.com.agendaespacomahara.domain;
+package br.com.agendajava.domain;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -39,6 +39,7 @@ public class Servico extends AbstractEntity {
 
 	public Servico(String descricao, Date data_do_servico, Date data_do_pagamento, BigDecimal valor,
 			String forma_de_pagamento, String observacao) {
+		super();
 		this.descricao = descricao;
 		this.data_do_servico = data_do_servico;
 		this.data_do_pagamento = data_do_pagamento;
